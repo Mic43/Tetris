@@ -135,31 +135,6 @@ void Scene::ProcessSpecialKeys(int key, int xx, int yy) {
 	title += std::to_string(angleX) + " " + std::to_string(angleY);
 	glutSetWindowTitle(title.c_str());
 
-//						
-//	switch (key) 
-//	{
-//		case GLUT_KEY_LEFT:
-//			angleY -= 0.1f;		
-//			break;
-//		case GLUT_KEY_RIGHT:
-//			angleY += 0.1f;		
-//			break;
-//		case GLUT_KEY_PAGE_UP:
-//			angleX += 0.1f;
-//			break;
-//		case GLUT_KEY_PAGE_DOWN:
-//			angleX -= 0.1f;
-//			break;
-//		case GLUT_KEY_UP:
-//			x += lx * fraction;
-//			z += lz * fraction;
-//			break;
-//		case GLUT_KEY_DOWN:
-//			x -= lx * fraction;
-//			z -= lz * fraction;
-//			break;
-//	}
-
 
 		switch (key)
 		{
@@ -177,13 +152,9 @@ void Scene::ProcessSpecialKeys(int key, int xx, int yy) {
 			break;
 		case GLUT_KEY_UP:
 			camera.IncreaseDistanceBy(-1);
-			//x += lx * fraction;
-			//z += lz * fraction;
 			break;
 		case GLUT_KEY_DOWN:
 			camera.IncreaseDistanceBy(1);
-			//x -= lx * fraction;
-			//z -= lz * fraction;
 			break;
 		}
 
@@ -194,9 +165,7 @@ void Scene::Display()
 {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glLoadIdentity();
-//		gluLookAt(x, y, z,
-//				 x + lx, y + ly, z + lz,
-//				 0.0f, 1.0f, 0.0f);
+
 		camera.Update();
 			
 		drawGrid();
@@ -262,9 +231,7 @@ void Scene::DrawCubeAt(Position3D pos,Color color,float size) const
 		glVertex3f(size, -size, -size);
 		glEnd();  // End of drawing color-cube
 		glPopMatrix();
-
-		//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	//	glTranslatef(-pos.column, -pos.row, -pos.depth);		
+		
 }
 
 void Scene::drawGrid() {
@@ -336,7 +303,5 @@ void Scene::drawGrid() {
 		glPopMatrix();
 	}
 
-	
 
-	//glFlush();
 }

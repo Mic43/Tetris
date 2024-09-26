@@ -61,20 +61,5 @@ bool BlockShapeDefinition::isPossibleOn(const Board& board, Position3D shapePosi
 			return false;
 	}
 
-//	for (int i = 0; i < GetMaxColumns(); ++i)
-//	{
-//		for (int j = 0; j < GetMaxRows(); ++j)
-//		{
-//			if (isOccupied(j,i))
-//			{
-//				Position3D analysedPos = shapePosition.Translate(j, i, 0);
-//
-//				if (!board.IsInBounds(analysedPos))
-//					return false;
-//				if (board.GetArea(analysedPos).isOccupied)
-//					return false;
-//			}
-//		}
-//	}
 	return true;
 }

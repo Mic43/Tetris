@@ -37,25 +37,10 @@ public:
 		Update();
 	}
 
-	
-
 	void Reset()
 	{				
 		Update();
 	}
-
-//	void MoveBy(Position3D aPositionOffset)
-//	{
-//		x += aPositionOffset.column;
-//		y += aPositionOffset.row;
-//		z += aPositionOffset.depth;
-//
-//		targetX += aPositionOffset.column;
-//		targetY += aPositionOffset.row;
-//		targetZ += aPositionOffset.depth;
-//
-//		Update();
-//	}
 
 	void RotateYBy(double angle)
 	{

@@ -45,24 +45,6 @@ void Board::DeleteLine(int row)
 
 void Board::ClearFullLines()
 {
-	//int count = GetFullLinesCount();
-
-//	for (int c = 0; c < MaxColumns; ++c)
-//	{
-//		for (int d = 0; d < MaxDepth; ++d)
-//		{
-//			for (int r = MaxRows-1; r >= count; --r)
-//			{
-//				areas[c][r][d] = areas[c][r - count][d];
-//			}
-//			for (int r = count -1; r >=0; r--)
-//			{
-//				areas[c][r][d] = Area();				
-//			}
-//		}
-//	
-//	}
-
 	for (int r = MaxRows - 1; r >= 0; --r)
 	{
 		if (IsLineFull(r))

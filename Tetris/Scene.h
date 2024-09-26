@@ -59,7 +59,6 @@ class Scene
 
 	
 	void Resize(int width, int height);
-	int AngleChange();
 
 	void Idle() {
 		glutPostRedisplay();

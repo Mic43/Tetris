@@ -24,15 +24,8 @@ struct Area
 // klasa reprezentuje plansze gry
 class Board
 {	
-	//Area*** areas;	
-	Area areas[MaxColumns][MaxRows][MaxDepth]; // trojwymiarowa tablica pol, reprezentujaca stan planaszy
-		
-	//std::array<int, x> a;
-
-//	int size_x_;
-//	int size_y_;
-//	int size_z_;
-
+	
+	Area areas[MaxColumns][MaxRows][MaxDepth]; // trojwymiarowa tablica pol, reprezentujaca stan planaszy	
 public:
 	Board()
 	{
